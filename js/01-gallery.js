@@ -30,16 +30,12 @@ function onClick(e) {
     const currentImage = galleryItems.find(({ original }) => original === galleryImageSource);
 
     const instance = basicLightbox.create(`
-	<div>
-    <a class="gallery__link" href="${currentImage.original}">
-    <img
+	<img
       class="gallery__image"
       src="${currentImage.original}"
       data-source="${currentImage.original}"
       alt="${currentImage.description}"
     />
-  </a>
-  </div>
 `,
         {
         onShow: (instance) => {
